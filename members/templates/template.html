@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello{{firstname}}, how are you ?</h1> <br> <br>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'myglobal.css'%}">
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>firstname</th>
+    <th>lastname</th>
+  </tr>
+  {% for x in mymembers %} <!--set introduction, make a table -->
+  <tr>
+    <td>{{x.id}}</td>
+    <td>{{x.firstname}}</td>
+    <td>{{x.lastname}}</td>
+  </tr>
+  
+{% endfor %}
+</table>
+
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+
+we're have the problem, cus in this address actually we should get a view just apple, banana, and cherry
+<br>
+not else
+</body>
+</html>
